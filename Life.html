@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My basic website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Some basic styles for the player and controls */
+        #music-controls {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #volume {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Global Problem</a></li>
+            <li><a href="#services">Examples of Gender Inequality</a></li>
+            <li><a href="#contact">Summary</a></li>
+        </ul>
+    </nav>
+
+    <!-- Music Player -->
+    <div id="autoplay">
+        <audio id="music" loop>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="music-controls">
+            <button id="playPauseBtn">Play</button>
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section id="home">
+        <h1>Welcome to My presentation</h1>
+        <p>Welcome I hove you enjoy </p>
+    </section>
+
+    <section id="about">
+        <h1>Global Problem
+            Introduction</h1>
+        <p>Sexism may be defined as unequal rights of person based on their sexes with females and other gendered people being the worst affected.
+           This is backed up by social expectations and cultural beliefs and is quite expressed through education, employment and political realms. </p>
+    </section>
+
+    <section id="services">
+        <h1>Examples of Gender Inequality</h1>
+        <p>Employment: Across the world female workers are paid less compared to their male counterparts for the same job. 
+            There is still a gender pay disparity where women earn slightly above two thirds of that earned by men and more specifically 77%.
+            Education: In developing nations particularly, girls’ education enrollment to school is lower than that of boys basically due to cultural and economic factors.</p>
+    </section>
+    <section id="contact">
+        <h1>Summary</h1>
+        <p>It remains a social problem that is universal and was manifested in various aspects of people’s lives. 
+            To solve it, basic changes must be made in policies, workplace, and norms to offer and protect rights of women and men.</p>
+    </section>
+
+    <!-- Script for controlling the music -->
+    <script>
+        const music = document.getElementById('music');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const volumeSlider = document.getElementById('volume');
+
+        // Toggle play/pause
+        playPauseBtn.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                music.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+
+        // Adjust volume
+        volumeSlider.addEventListener('input', (e) => {
+            music.volume = e.target.value;
+        });
+
+        // Start playing when the page loads
+        window.onload = () => {
+            music.play();
+            playPauseBtn.textContent = 'Pause';
+        };
+    </script>
+</body>
+</html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEC Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .logo-container img {
+            width: 150px; /* Adjust the size as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="/mnt/data/image.png" alt="APEC Schools Logo">
+    </div>
+
+</body>
+</html>
